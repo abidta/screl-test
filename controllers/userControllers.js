@@ -1,5 +1,5 @@
 import { db } from "../config/db.js"
-import { qUserData } from "../sql/queries.js"
+import { qAllData, qUserData } from "../sql/queries.js"
 
 export const userControllers=(req,res,next)=>{
     
@@ -10,3 +10,11 @@ export const userControllers=(req,res,next)=>{
         res.json(result)
     })
 } 
+export const getAllData=(req,res)=>{
+    db.execute(qAllData,(err,result)=>{
+        if (err) {
+            throw err
+        }
+        res.json(result)
+    })
+}

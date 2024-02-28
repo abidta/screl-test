@@ -2,3 +2,4 @@ export const createTable = `CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREM
 export const createUser = `INSERT INTO users (username,email,fullName,password,bio) VALUES (?,?,?,?,?)`;
 export const qUsername='SELECT * FROM users WHERE username = ?'
 export const qUserData='SELECT id, username, email, fullName, bio  FROM users WHERE id = ?'
+export const qAllData='SELECT id, username, email, fullName, bio FROM users'
