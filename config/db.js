@@ -17,6 +17,7 @@ export const creteUserTable = async () => {
       console.log(result);
     });
   } catch (error) {
-    throw error;
+    console.log(error)
+    process.exit(1)
   }
 };
